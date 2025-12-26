@@ -1,22 +1,27 @@
 #------------project configuration start----------------#
 openie_llm: &openie_llm
   type: maas
-  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
-  api_key: key
-  model: qwen2.5-7b-instruct-1m
+# base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
+  base_url: https://api.siliconflow.cn/v1/
+  api_key: sk-snyktzxwsxfoocxlcbfynmhbfqnoqbrtabrqxfufnzwzeive
+  model: Qwen/Qwen2.5-7B-Instruct
   enable_check: false
 
 chat_llm: &chat_llm
   type: maas
-  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
-  api_key: key
-  model: qwen2.5-72b-instruct
+# base_url: https://dashscope.aliyuncs.com/compatible-mode/v1/
+  base_url: https://api.deepseek.com/v1
+  api_key: sk-880dfeade97349fa8701a768ed5eb711
+  model: deepseek-reasoner
   enable_check: false
 
 vectorize_model: &vectorize_model
-  api_key: key
-  base_url: https://api.siliconflow.cn/v1/
-  model: BAAI/bge-m3
+# api_key: sk-snyktzxwsxfoocxlcbfynmhbfqnoqbrtabrqxfufnzwzeive
+  api_key: cannot be empty
+# base_url: https://api.siliconflow.cn/v1/
+  base_url: http://221.224.45.182:9997/v1/
+# model: BAAI/bge-large-zh-v1.5
+  model: Qwen3-Embedding-8B
   type: openai
   vector_dimensions: 1024
   enable_check: false
@@ -30,7 +35,7 @@ project:
   host_addr: http://127.0.0.1:8887
   id: "1"
   language: en
-  namespace: HotpotQATest
+  namespace: PowerStation
 #------------project configuration end----------------#
 
 #------------kag-builder configuration start----------------#

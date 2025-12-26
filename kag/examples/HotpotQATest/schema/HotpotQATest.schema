@@ -1,0 +1,39 @@
+namespace PowerStation
+
+PowerPlant(电厂): EntityType
+    properties:
+        desc(描述): Text
+        
+Unit(机组): EntityType
+    properties:
+        desc(描述): Text
+
+System(系统): EntityType
+    properties:
+        desc(描述): Text
+
+Area(区域): EntityType
+    properties:
+        desc(描述): Text
+
+Equipment(设备): EntityType
+    properties:
+        name(名称): Text
+            index: Text  # 用于文本搜索
+        deviceType(设备类型): Text
+        serialNumber(序列号): Text
+            index: Text
+
+MeasurePoint(测点): EntityType
+    properties:
+        kks(KKS码): Text
+            index: TextAndVector 
+        desc(功能描述): Text
+            index: TextAndVector
+        invalidCode(无效代码标识): Text
+        unit(单位): Text
+
+Chunk(文本块): EntityType
+    properties:
+        content(内容): Text
+            index: TextAndVector
